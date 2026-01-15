@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Dona - VLN</title>
+  <link rel="shortcut icon" href="/assets/Logo.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>body{padding:120px 16px}</style>
+</head>
+<body>
+
+    <header class="site-header" role="banner">
+        <div class="header-left">
+          <div class="brand">
+              <a href="/html/index.html" aria-label="Valencia La Nuestra">
+                  <img src="../assets/Logo.png" class="logo" alt="VLN logo" />
+              </a>
+          </div>
+          <nav class="top-nav" role="menubar" aria-label="Main Navigation">
+            <div class="nav-item" role="none">
+                <button class="nav-btn" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0" data-key="sobre">Sobre VLN</button>
+                <div class="submenu" role="menu" aria-label="Sobre VLN submenu">
+                    <a class="submenu-primary" role="menuitem" tabindex="-1" href="sobre/index.html">Quienes somos</a>
+                    <div class="submenu-links">
+                      <a role="menuitem" tabindex="-1" href="sobre/nuestro-equipo.html">Nuestro equipo</a>
+                      <a role="menuitem" tabindex="-1" href="sobre/nuestra-ciencia.html">Nuestra ciencia</a>
+                      <a role="menuitem" tabindex="-1" href="sobre/responsabilidad.html">Responsabilidad</a>
+                      <a role="menuitem" tabindex="-1" href="sobre/nuestra-historia.html">Nuestra Historia</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item" role="none">
+                <button class="nav-btn" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0" data-key="que-hacemos">Qué hacemos</button>
+                <div class="submenu" role="menu" aria-label="Qué hacemos submenu">
+                    <a class="submenu-primary" role="menuitem" tabindex="-1" href="que-hacemos/index.html">Programas</a>
+                    <div class="submenu-links">
+                      <a role="menuitem" tabindex="-1" href="que-hacemos/proyectos.html">Proyectos</a>
+                      <a role="menuitem" tabindex="-1" href="que-hacemos/talleres.html">Talleres</a>
+                      <a role="menuitem" tabindex="-1" href="que-hacemos/restauracion.html">Restauración</a>
+                      <a role="menuitem" tabindex="-1" href="que-hacemos/investigacion.html">Investigación</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-item" role="none">
+                <button class="nav-btn" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0" data-key="participa">Participa</button>
+                <div class="submenu" role="menu" aria-label="Participa submenu">
+                    <a class="submenu-primary" role="menuitem" tabindex="-1" href="participa/index.html">Participa</a>
+                    <div class="submenu-links">
+                      <a role="menuitem" tabindex="-1" href="participa/voluntariado.html">Voluntariado</a>
+                      <a role="menuitem" tabindex="-1" href="participa/donaciones.html">Donaciones</a>
+                      <a role="menuitem" tabindex="-1" href="participa/eventos.html">Eventos</a>
+                      <a role="menuitem" tabindex="-1" href="participa/colaboraciones.html">Colaboraciones</a>
+                    </div>
+                </div>
+            </div>
+
+          </nav>
+        </div>
+        <div class="header-right">
+            <a href="/html/donate.html" class="btn btn-donate" aria-label="Dona a Valencia La Nuestra">Dona</a>
+        </div>
+    </header>
+
+  <main class="donate-page" style="max-width:980px;margin:28px auto;padding:0 16px">
+
+    <h1>Apoya a Valencia La Nuestra</h1>
+    <p class="lead">Tu apoyo nos permite conservar espacios naturales, financiar proyectos de restauración y mantener programas educativos locales. Gracias por confiar en nuestra misión.</p>
+
+    <section class="donation-grid" style="display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start">
+
+      <!-- Left: donation form -->
+      <article aria-labelledby="donar-titulo">
+        <h2 id="donar-titulo">Haz una donación</h2>
+
+        <form id="donation-form" action="https://example.com/donate" method="POST" target="_blank" novalidate>
+
+          <fieldset>
+            <legend>Cantidad</legend>
+
+            <label for="custom-amount" class="sr-only">Cantidad en bolívares</label>
+            <input id="custom-amount" name="amount" type="number" inputmode="numeric" min="1" step="1" placeholder="Cantidad en Bolivares (ej. 5000)" style="margin-top:12px;padding:10px;border-radius:6px;border:1px solid rgba(2,32,77,0.08);width:100%" />
+          </fieldset>
+
+          <fieldset style="margin-top:12px">
+            <legend>Frecuencia</legend>
+            <label><input type="radio" name="frequency" value="one_time" checked /> Única</label>
+            <label style="margin-left:12px"><input type="radio" name="frequency" value="monthly" /> Mensual</label>
+          </fieldset>
+
+          <fieldset style="margin-top:12px">
+            <legend>Método de pago</legend>
+            <select name="method" style="padding:10px;border-radius:6px;border:1px solid rgba(2,32,77,0.08);width:100%">
+              <option value="card">Tarjeta (procesador seguro)</option>
+              <option value="bank">Transferencia bancaria</option>
+              <option value="contact">Pagar luego / Contactar</option>
+            </select>
+          </fieldset>
+
+          <input type="hidden" name="currency" value="VES" />
+
+          <div style="margin-top:16px;display:flex;gap:12px;align-items:center">
+            <button type="submit" class="btn btn-donate">Continuar a pago</button>
+            <div id="donation-status" aria-live="polite" style="color:#2b73b6;font-weight:700"></div>
+          </div>
+
+          <p style="margin-top:10px;color:var(--muted);font-size:0.95rem">Recibirás un recibo fiscal por email si lo solicitas. Para donaciones recurrentes recibirás un resumen anual.</p>
+        </form>
+
+        <hr style="margin:22px 0">
+
+        <section>
+          <h3>Preguntas frecuentes</h3>
+          <details>
+            <summary>¿Puedo donar por transferencia bancaria?</summary>
+            <p>Sí — abajo están los datos para transferencias o depósito. Añade en el concepto: <strong>DONACIÓN – TU NOMBRE</strong>.</p>
+          </details>
+
+          <details style="margin-top:8px">
+            <summary>¿Es deducible mi donación?</summary>
+            <p>Valencia La Nuestra es una organización sin ánimo de lucro. Las donaciones pueden ser deducibles según la normativa fiscal vigente; para más información pide tu recibo fiscal al <a href="mailto:info@valencialanuestra.org">correo</a>.</p>
+          </details>
+        </section>
+
+      </article>
+
+      <!-- Right: bank details & contacto -->
+      <aside aria-labelledby="info-titulo" style="background:#fff;border-radius:10px;padding:18px;box-shadow:0 8px 28px rgba(16,24,40,0.06)">
+        <h3 id="info-titulo">Opciones alternativas</h3>
+
+        <div style="margin-top:8px">
+          <h4>Transferencia / Datos</h4>
+          <p style="margin:6px 0">RIF: <strong id="rif">JXXXXXXXX-X</strong></p>
+          <p>TLF: <strong id="phone">04XXXXXXXXX</strong></p>
+          <p>Titular: <strong>Asociación Valencia La Nuestra</strong></p>
+
+          <div style="margin-top:8px;display:flex;gap:8px;align-items:center;">
+            <button class="btn" id="copy-iban" style="">Copiar datos</button>
+          </div>
+          <div id="copy-msg" role="status" aria-live="polite" style="margin-top:8px;color:green;display:none">Copiado al portapapeles</div>
+
+
+        </div>
+
+        <hr style="margin:18px 0">
+
+        <div id="contacto">
+          <h4>Contacto</h4>
+          <p>¿Dudas o quieres recibir ayuda para donar? Escríbenos: <a href="mailto:info@valencialanuestra.org">info@valencialanuestra.org</a></p>
+          <p>Teléfono: <a href="tel:04XXXXXXXXX">04XXXXXXXXX</a></p>
+        </div>
+
+      </aside>
+
+    </section>
+
+    <!-- Small script to handle amount buttons, conversion and copy -->
+    <script>
+      (function(){
+        const customAmount = document.getElementById('custom-amount');
+        const form = document.getElementById('donation-form');
+        const status = document.getElementById('donation-status');
+        const copyBtn = document.getElementById('copy-iban');
+        const copyMsg = document.getElementById('copy-msg');
+
+        function fmt(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
+
+        // Clear any status when user edits amount
+        customAmount.addEventListener('input', () => { status.textContent = ''; });
+
+        form.addEventListener('submit', (e) => {
+          const val = parseFloat(customAmount.value);
+          if (!val || val < 1) {
+            e.preventDefault();
+            status.textContent = 'Introduce una cantidad mínima de 1 VES.';
+            customAmount.focus();
+            return;
+          }
+          status.textContent = 'Abriendo pasarela de pago…';
+        });
+
+        copyBtn.addEventListener('click', async () => {
+          const rif = document.getElementById('rif').textContent.trim();
+          const phone = document.getElementById('phone').textContent.trim();
+          const text = `RIF: ${rif}\nTLF: ${phone}\nTitular: Asociación Valencia La Nuestra`;
+          try {
+            await navigator.clipboard.writeText(text);
+            copyMsg.style.display = 'block';
+            setTimeout(()=>copyMsg.style.display = 'none',2400);
+          } catch(err){
+            copyMsg.textContent = 'No se pudo copiar automáticamente. Selecciona y copia manualmente.';
+            copyMsg.style.display = 'block';
+          }
+        });
+
+      })();
+    </script>
+
+    <hr style="margin:28px 0;opacity:0.06">
+
+    <section style="color:var(--muted);font-size:0.95rem">
+      <p>Gracias por apoyar a Valencia La Nuestra — cada contribución nos acerca a un futuro más verde.</p>
+    </section>
+
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
